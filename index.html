@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NF Exemplo</title>
+
+    <style>
+        
+        .table-parte1, .table-parte2, .table-parte3, .table-parte4, td , tr{   
+            border: solid 1px;
+            border-collapse: collapse;
+            font-family: sans-serif;
+            font-size: 10px;
+        }
+
+        .table-parte1, .table-parte2, .table-parte3, .table-parte4, .table-parte5{
+            width: 100%;
+        }
+
+        .descricao{
+            text-align: left;
+            vertical-align: top;
+            font-size: 8px;
+            margin-left: 3px;
+            margin-top: 1px;
+        }
+
+        .informacao{
+            margin: 1px;
+            margin-left: 3px ;
+            margin-bottom: 1px;
+        }
+
+        .informacao-valores{
+            margin-top: -3px;
+            margin-bottom: -1px;
+            margin-right: 3px;
+            margin-bottom: 1px;
+            text-align: right;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .header-produtos{
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 8px;
+            margin: 2px;    
+        }
+
+        .produtos{
+            text-align: center;
+            font-size: 12px;
+            font-family: sans-serif;
+            margin: 2px;
+        }
+
+        .nome-produtos{
+            text-align: left;
+            font-size: 12px;
+            font-family: sans-serif;
+            margin: 2px;
+        }
+
+        .recebimentos{
+            border: solid 1px;
+            margin-top: 5px;
+            font-size: 10px;
+            font-family: sans-serif;
+            width: 20%;
+        }
+
+        .caption-rece{
+            text-align: left;
+        }
+        
+        hr{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: 1px dashed;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="tabela-info-empresa">
+        <table class="table-parte1">
+            <tr>
+                <td rowspan="3" style="text-align: center; width: 50%;">
+                    <div style="width: 25%; height: 50px;">
+                        <img style="width: 70px; height: 50px;" src="LOGO" alt="">
+                    </div>
+
+                    <div style="margin-top: -50px; margin-left: 25%; width: 75%; height: 50px; text-align: left;">
+                        <p>
+                            #NOME-DA-EMPRESA# <br>
+                            #ENDERECO-DA-EMPRESA# <br>
+                            #CIDADE-DA-EMPRESA#
+                        </p>
+                    </div>
+                </td>    
+                <td colspan="3" style=" font-size: 15px; text-align: center;">
+                    <p style="font-weight: bold; margin: 1px;">NOTA FISCAL</p>
+                </td>
+            </tr>
+            <tr>    
+                <td colspan="3"> 
+                    <p class="descricao">INSCRIÇÃO ESTADUAL</p> 
+                    <p class="informacao">#ie-empresa#</p> 
+                </td>
+            </tr>
+            <tr>    
+                <td colspan="2"> 
+                    <p class="descricao">CPF / CNPJ</p> 
+                    <p class="informacao"> #cpf-cnpj-empresa# </p>
+                </td>
+
+                <td style="text-align: center;">
+                    <p class="informacao">N° #numero-da-nota#
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="width: 65%;"> 
+                    <p class="descricao">NOME / RAZÃO SOCIAL </p> 
+                    <p class="informacao">#nome-da-empresa-cliente#</p>
+                </td>
+
+
+                <td style="width: 20%;">
+                    <p class="descricao">CPF / CNPJ</p> 
+                    <p class="informacao">#cpf-cnpj-empresa-cliente#</p> 
+                </td>
+                <td style="text-align: center;">
+                    <p class="descricao">DATA EMISSÃO</p>
+                    <p class="informacao">#data-emissao#</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="tabela-endereco-e-contato">
+        <table class="table-parte2" style="margin-top: 2px;" >
+            <tr>
+                <td colspan="2" style="width: 55%;">
+                    <p class="descricao">ENDEREÇO</p> 
+                    <p class="informacao">#endereco-da-empresa-cliente#</p> 
+                </td>
+
+                <td colspan="3"  style="width: 20%;">
+                    <p class="descricao">BAIRRO / DISTRITO</p>
+                    <p class="informacao"> #bairro-empresa-cliente#</p>
+                </td>
+
+                <td style="width: 9%;">
+                    <p class="descricao" >CEP</p>
+                    <p class="informacao">#cep-empresa-cliente#</p>
+                </td>
+
+                <td style="text-align: center;">
+                    <p class="descricao">DATA ENTRADA / SAIDA</p>
+                    <p class="informacao">#data-entrada-saida#</p>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <p class="descricao" style="width: 40%;">MUNICÍPIO</p>
+                    <p class="informacao">#municipio-empresa-cliente#</p>
+                </td>
+
+                <td colspan="2">
+                    <p class="descricao">FONE/CELULAR</p>
+                    <p class="informacao">#contato-empresa-cliente#</p>
+                </td>
+
+                <td>
+                    <p class="descricao">UF</p>
+                    <p class="informacao">#uf-empresa-cliente#</p>
+                </td>
+                <td colspan="2">
+                    <p class="descricao">INSCRIÇÃO ESTADUAL</p>
+                    <p class="informacao">#ie-empresa-cliente#</p>
+                </td>
+
+                <td style="text-align: center;">
+                    <p class="descricao">HORA ENTRADA / SAÍDA</p>
+                    <p class="informacao">#hora-entrada-saida#</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="tabela-de-valores">
+        <table class="table-parte3" style="margin-top: 2px;">
+            <tr>
+                <td>
+                    <p class="descricao">VALOR TOTAL DOS PRODUTOS</p>
+                    <P class="informacao-valores">R$ #total-produtos#</P>
+                </td>
+                <td>
+                    <p class="descricao">VALOR TOTAL DOS SERVIÇOS</p>
+                    <p class="informacao-valores">R$ #total-servicos#</p>
+                </td>
+                <td>
+                    <p class="descricao">VALOR DO FRETE</p>
+                    <p class="informacao-valores">R$ #total-frete#</p>
+                </td>
+                <td>
+                    <p class="descricao">VALOR DO ACRÉSCIMO</p>
+                    <p class="informacao-valores">R$ #total-acrescimos#</p>
+                </td>
+                <td>
+                    <p class="descricao">DESCONTO</p>
+                    <p class="informacao-valores">R$ #total-descontos#</p>
+                </td>
+                <td>
+                    <p class="descricao">VALOR TOTAL DA VENDA</p>
+                    <p class="informacao-valores">R$ #total-vendas#</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="tabela-dados-dos-produtos">
+        <table class="table-parte4" style="margin-top: 5px;">
+            <caption style="text-align: left;"> DADOS DOS PRODUTOS</caption>
+            <tr>
+                <td>
+                    <p class="header-produtos">CÓDIGO</p>
+                </td>
+                <td>
+                    <p class="header-produtos">DESCRIÇÃO DOS PRODUTOS</p>
+                </td>
+                <td>
+                    <p class="header-produtos">UN</p>
+                </td>
+                <td>
+                    <p class="header-produtos">QTD</p>
+                </td>
+                <td>
+                    <p class="header-produtos">VALOR UN.</p>
+                </td>
+                <td>
+                    <p class="header-produtos">DESC.</p>
+                </td>
+                <td>
+                    <p class="header-produtos">VALOR DESC.</p>
+                </td>
+                <td>
+                    <p class="header-produtos">VALOR TOTAL</p>
+                </td>
+            </tr>
+            <tr class="linha-sem-borda">
+                <td>
+                    <p class="produtos">#cod-produto#</p>
+                </td>
+                <td>
+                    <p class="nome-produtos">#descricao-produto#</p>
+                </td>
+                <td>
+                    <p class="produtos">#unidade-produto#</p>
+                </td>
+                <td>
+                    <p class="produtos">#qtd-produto#</p>
+                </td>
+                <td>
+                    <p class="informacao-valores">#valor-unitario-produto#</p>
+                </td>
+                <td>
+                    <p class="informacao-valores">#perc-desconto-produto#</p>
+                </td>
+                <td>
+                    <p class="informacao-valores">#valor-desconto-produto#</p>
+                </td>
+                <td>
+                    <p class="informacao-valores">#total-produto#</p>
+                </td>
+                
+            </tr>
+            <tr >
+                <td>
+                    <p class="produtos">#cod-produto#</p>
+                </td>
+                <td>
+                    <p class="nome-produtos">#descricao-produto#</p>
+                </td>
+                <td>
+                    <p class="produtos">#unidade-produto#</p>
+                </td>
+                <td>
+                    <p class="produtos">#qtd-produto#</p>
+                </td>
+                <td>
+                    <p class="informacao-valores">#valor-unitario-produto#</p>
+                </td>
+                <td>
+                    <p class="informacao-valores">#perc-desconto-produto#</p>
+                </td>
+                <td>
+                    <p class="informacao-valores">#valor-desconto-produto#</p>
+                </td>
+                <td>
+                    <p class="informacao-valores">#total-produto#</p>
+                </td>
+                
+            </tr>
+        </table>
+    </div>
+
+    <div class="tabela-recebimentos">
+        <table class="recebimentos">
+            <caption class="caption-rece">Recebimentos</caption>
+            <tr class="tr-rece">
+                <td style="border: none;">
+                    <p style="margin: 1px; text-align: center;">#data-recebimento#</p>
+                </td>
+                <td style="border: none;">
+                    <p style="margin: 1px; text-align: right;">R$ #total-recebimento#</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="area-assinatura">
+        <div style=" margin-left: 10%;width: 40%; height: 30px;">
+            <p style="font-size: 10px; text-align: center;">_____________________________________</p>
+            <p style="font-size: 8px; margin-top: -5px; text-align: center;">Assinatura do Cliente</p>
+        </div>
+        <div style=" width:40%; height: 30px; margin-left: 50%; margin-top: -40px;">
+            <p style="font-size: 10px; text-align: center;">_____________________________________</p>
+            <p style="font-size: 8px; margin-top: -5px; text-align: center;">#NOME-DA-EMPRESA#</p>
+        </div>
+    </div>
+
+    <div class="tabela-observacoes">
+        <table class="table-parte5">
+            <tr>
+                <td>
+                    <p class="descricao">OBSERVAÇÕES</p>
+                    <p class="informacao">| Vendedor: #nome-vendedor# | OS N°: #numero-da-nota# | Pagamento: #forma-pgto# R$ #total-produtos#</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+<!-- Aqui começa a segunda via do espelho -->
+
+    <div class="tabela-info-empresa">
+        <table class="table-parte1">
+            <tr>
+                <td rowspan="3" style="text-align: center; width: 50%;">
+                    <div style="width: 25%; height: 50px;">
+                        <img style="width: 70px; height: 50px;" src="LOGO" alt="">
+                    </div>
+
+                    <div style="margin-top: -50px; margin-left: 25%; width: 75%; height: 50px;text-align: left;">
+                        <p>
+                            #NOME-DA-EMPRESA# <br>
+                            #ENDERECO-DA-EMPRESA# <br>
+                            #CIDADE-DA-EMPRESA#
+                        </p>
+                    </div>
+                </td>    
+                <td colspan="3" style=" font-size: 15px; text-align: center;">
+                    <p style="font-weight: bold; margin: 1px;">NOTA FISCAL</p>
+                </td>
+            </tr>
+            <tr>    
+                <td colspan="3"> 
+                    <p class="descricao">INSCRIÇÃO ESTADUAL</p> 
+                    <p class="informacao">#ie-empresa#</p> 
+                </td>
+            </tr>
+            <tr>    
+                <td colspan="2"> 
+                    <p class="descricao">CPF / CNPJ</p> 
+                    <p class="informacao"> #cpf-cnpj-empresa# </p>
+                </td>
+
+                <td style="text-align: center;">
+                    <p class="informacao">N° #numero-da-nota#
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="width: 65%;"> 
+                    <p class="descricao">NOME / RAZÃO SOCIAL </p> 
+                    <p class="informacao">#nome-da-empresa-cliente#</p>
+                </td>
+
+
+                <td style="width: 20%;">
+                    <p class="descricao">CPF / CNPJ</p> 
+                    <p class="informacao">#cpf-cnpj-empresa-cliente#</p> 
+                </td>
+                <td style="text-align: center;">
+                    <p class="descricao">DATA EMISSÃO</p>
+                    <p class="informacao">#data-emissao#</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="tabela-endereco-e-contato">
+        <table class="table-parte2" style="margin-top: 2px;" >
+            <tr>
+                <td colspan="2" style="width: 55%;">
+                    <p class="descricao">ENDEREÇO</p> 
+                    <p class="informacao">#endereco-da-empresa-cliente#</p> 
+                </td>
+
+                <td colspan="3"  style="width: 20%;">
+                    <p class="descricao">BAIRRO / DISTRITO</p>
+                    <p class="informacao"> #bairro-empresa-cliente#</p>
+                </td>
+
+                <td style="width: 9%;">
+                    <p class="descricao" >CEP</p>
+                    <p class="informacao">#cep-empresa-cliente#</p>
+                </td>
+
+                <td style="text-align: center;">
+                    <p class="descricao">DATA ENTRADA / SAIDA</p>
+                    <p class="informacao">#data-entrada-saida#</p>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <p class="descricao" style="width: 40%;">MUNICÍPIO</p>
+                    <p class="informacao">#municipio-empresa-cliente#</p>
+                </td>
+
+                <td colspan="2">
+                    <p class="descricao">FONE/CELULAR</p>
+                    <p class="informacao">#contato-empresa-cliente#</p>
+                </td>
+
+                <td>
+                    <p class="descricao">UF</p>
+                    <p class="informacao">#uf-empresa-cliente#</p>
+                </td>
+                <td colspan="2">
+                    <p class="descricao">INSCRIÇÃO ESTADUAL</p>
+                    <p class="informacao">#ie-empresa-cliente#</p>
+                </td>
+
+                <td style="text-align: center;">
+                    <p class="descricao">HORA ENTRADA / SAÍDA</p>
+                    <p class="informacao">#hora-entrada-saida#</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="tabela-de-valores">
+        <table class="table-parte3" style="margin-top: 2px;">
+            <tr>
+                <td>
+                    <p class="descricao">VALOR TOTAL DOS PRODUTOS</p>
+                    <P class="informacao-valores">R$ #total-produtos#</P>
+                </td>
+                <td>
+                    <p class="descricao">VALOR TOTAL DOS SERVIÇOS</p>
+                    <p class="informacao-valores">R$ #total-servicos#</p>
+                </td>
+                <td>
+                    <p class="descricao">VALOR DO FRETE</p>
+                    <p class="informacao-valores">R$ #total-frete#</p>
+                </td>
+                <td>
+                    <p class="descricao">VALOR DO ACRÉSCIMO</p>
+                    <p class="informacao-valores">R$ #total-acrescimos#</p>
+                </td>
+                <td>
+                    <p class="descricao">DESCONTO</p>
+                    <p class="informacao-valores">R$ #total-descontos#</p>
+                </td>
+                <td>
+                    <p class="descricao">VALOR TOTAL DA VENDA</p>
+                    <p class="informacao-valores">R$ #total-vendas#</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="tabela-dados-dos-produtos">
+        <table class="table-parte4" style="margin-top: 5px;">
+            <caption style="text-align: left;"> DADOS DOS PRODUTOS</caption>
+            <tr>
+                <td>
+                    <p class="header-produtos">CÓDIGO</p>
+                </td>
+                <td>
+                    <p class="header-produtos">DESCRIÇÃO DOS PRODUTOS</p>
+                </td>
+                <td>
+                    <p class="header-produtos">UN</p>
+                </td>
+                <td>
+                    <p class="header-produtos">QTD</p>
+                </td>
+                <td>
+                    <p class="header-produtos">VALOR UN.</p>
+                </td>
+                <td>
+                    <p class="header-produtos">DESC.</p>
+                </td>
+                <td>
+                    <p class="header-produtos">VALOR DESC.</p>
+                </td>
+                <td>
+                    <p class="header-produtos">VALOR TOTAL</p>
+                </td>
+            </tr>
+            <tr class="linha-sem-borda">
+                <td>
+                    <p class="produtos">#cod-produto#</p>
+                </td>
+                <td>
+                    <p class="nome-produtos">#descricao-produto#</p>
+                </td>
+                <td>
+                    <p class="produtos">#unidade-produto#</p>
+                </td>
+                <td>
+                    <p class="produtos">#qtd-produto#</p>
+                </td>
+                <td>
+                    <p class="informacao-valores">#valor-unitario-produto#</p>
+                </td>
+                <td>
+                    <p class="informacao-valores">#perc-desconto-produto#</p>
+                </td>
+                <td>
+                    <p class="informacao-valores">#valor-desconto-produto#</p>
+                </td>
+                <td>
+                    <p class="informacao-valores">#total-produto#</p>
+                </td>
+            
+            </tr>
+            <tr >
+                <td>
+                    <p class="produtos">#cod-produto#</p>
+                </td>
+                <td>
+                    <p class="nome-produtos">#descricao-produto#</p>
+                </td>
+                <td>
+                    <p class="produtos">#unidade-produto#</p>
+                </td>
+                <td>
+                    <p class="produtos">#qtd-produto#</p>
+                </td>
+                <td>
+                    <p class="informacao-valores">#valor-unitario-produto#</p>
+                </td>
+                <td>
+                    <p class="informacao-valores">#perc-desconto-produto#</p>
+                </td>
+                <td>
+                    <p class="informacao-valores">#valor-desconto-produto#</p>
+                </td>
+                <td>
+                    <p class="informacao-valores">#total-produto#</p>
+                </td>
+            
+            </tr>
+        </table>
+    </div>
+
+    <div class="tabela-recebimentos">
+        <table class="recebimentos">
+            <caption class="caption-rece">Recebimentos</caption>
+            <tr class="tr-rece">
+                <td style="border: none;">
+                    <p style="margin: 1px; text-align: center;">#data-recebimento#</p>
+                </td>
+                <td style="border: none;">
+                    <p style="margin: 1px; text-align: right;">R$ #total-recebimento#</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="area-assinatura">
+        <div style=" margin-left: 10%;width: 40%; height: 30px;">
+            <p style="font-size: 10px; text-align: center;">_____________________________________</p>
+            <p style="font-size: 8px; margin-top: -5px; text-align: center;">Assinatura do Cliente</p>
+        </div>
+        <div style=" width:40%; height: 30px; margin-left: 50%; margin-top: -40px;">
+            <p style="font-size: 10px; text-align: center;">_____________________________________</p>
+            <p style="font-size: 8px; margin-top: -5px; text-align: center;">#NOME-DA-EMPRESA#</p>
+        </div>
+    </div>
+
+    <div class="tabela-observacoes">
+        <table class="table-parte5">
+            <tr>
+                <td>
+                    <p class="descricao">OBSERVAÇÕES</p>
+                    <p class="informacao">| Vendedor: #nome-vendedor# | OS N°: #numero-da-nota# | Pagamento: #forma-pgto# R$ #total-produtos#</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+   
+</body>
+</html>
